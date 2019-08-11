@@ -58,7 +58,7 @@ function unity_build
                         set exceptionMessage "ERROR: Empty value error! Argument name:" $argv[$i]
                         break
                     end
-                
+
                 # Manual license file
                 case "--license"
                     set i (math "$i + 1")
@@ -80,7 +80,7 @@ function unity_build
                         set exceptionMessage "ERROR: Empty value error! Argument name:" $argv[$i]
                         break
                     end
-                
+
                 # Directory
                 case "--buildDirectory"
                     set i (math "$i + 1")
@@ -104,7 +104,7 @@ function unity_build
                         set exceptionMessage "ERROR: Empty value error! Argument name:" $argv[$i]
                         break
                     end
-                
+
                 # Parsing flags
                 # Clean directory
                 case "--cleanDir"
@@ -117,7 +117,7 @@ function unity_build
                 case "-h"
                     set validCall false
                     set showHelp true
-                
+
                 # Default
                 case "*"
                     set validCall false
@@ -129,7 +129,7 @@ function unity_build
             if test $i -gt $n
                 break
             end
-        end 
+        end
     end
 
     # Set variables

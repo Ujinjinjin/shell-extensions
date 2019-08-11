@@ -68,7 +68,7 @@ function itch_publish
                         set exceptionMessage "ERROR: Empty value error! Argument name:" $argv[$i]
                         break
                     end
-                
+
                 # Username
                 case "--user"
                     set i (math "$i + 1")
@@ -90,7 +90,7 @@ function itch_publish
                         set exceptionMessage "ERROR: Empty value error! Argument name: $argv[$i]."
                         break
                     end
-                
+
                 # Game
                 case "--game"
                     set i (math "$i + 1")
@@ -112,7 +112,7 @@ function itch_publish
                         set exceptionMessage "ERROR: Empty value error! Argument name: $argv[$i]."
                         break
                     end
-                
+
                 # channel
                 case "--channel"
                     set i (math "$i + 1")
@@ -134,7 +134,7 @@ function itch_publish
                         set exceptionMessage "ERROR: Empty value error! Argument name: $argv[$i]."
                         break
                     end
-                
+
                 # Parsing flags
                 # Help
                 case "--help"
@@ -151,7 +151,7 @@ function itch_publish
                     set beta true
                 case "-b"
                     set beta true
-                
+
                 # Default
                 case "*"
                     set validCall false
@@ -163,7 +163,7 @@ function itch_publish
             if test $i -gt $n
                 break
             end
-        end 
+        end
     end
 
     # Validate input
@@ -194,7 +194,7 @@ function itch_publish
 
     # Validate call
     if $validCall
-        # Publish game   
+        # Publish game
         echo "Publishing started at:" (date)
         butler push $source "$user/$game:$channel"
         echo "Publishing finished at:" (date)
