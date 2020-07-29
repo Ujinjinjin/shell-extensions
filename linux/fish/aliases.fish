@@ -7,6 +7,12 @@ alias env='. .env/bin/activate.fish'
 alias cbuild='sudo g++ -o main main.cpp'
 alias crun='./main'
 
+# PostgreSQL
+alias pg_start='sudo service postgresql start'
+alias pg_stop='sudo service postgresql stop'
+alias pg_status='sudo service postgresql status'
+alias pg_restart='sudo service postgresql restart'
+
 # System
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
@@ -16,6 +22,7 @@ alias remove='sudo apt-get remove'
 # utils
 alias grantall='sudo chmod -R ugo+rw'
 # alias cls="clear && printf '\e[3J'"
+alias clipboard="clip.exe"
 
 # Change location
 alias home='cd ~'
